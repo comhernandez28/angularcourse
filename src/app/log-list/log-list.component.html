@@ -1,0 +1,14 @@
+<h1>Assignment 3</h1>
+<hr />
+<button class="btn btn-primary" (click)="displayMoreRequest()">Display Details</button>
+<br />
+<p *ngIf="displayMore">Details</p>
+<br />
+<h3>Request Log</h3>
+<ul>
+  <li *ngFor="let request of requests" [ngStyle]="{backgroundColor: request.bg}" [ngClass]="{'white-text': request.whiteText}">{{request.number}}</li>
+</ul>
+
+
+<!-- [ngClass]="{white-text: isOverFive === true}" -->
+<!-- [ngClass]="{white-text: request.whiteText}" -->
